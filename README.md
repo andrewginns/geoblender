@@ -36,7 +36,9 @@ For this tutorial I used the following software:
 	* [Camera Settings](#3c) 
 4. [Plug the DEM into the plane](#4)
 5. [Add Modifier](#5)
-6. [Add Colour!](#6)  
+6. [Add Colour!](#6)
+7. [Export Render to png file](#7)
+8. [Add Text and Borders](#8)  
 
 ### Step 1: Obtain the Terrain Data <a name="1"></a>
 
@@ -185,7 +187,7 @@ Now press F12 to render again and you should end up with something like this:
 
 <img src="./tutorial/screenshots/render2.png"> 
 
-## Step 6: Add Colour!  <a name="6"></a>
+## Step 6: Add Colour! <a name="6"></a>
 
 In order to add colour we can add a colour ramp which will use our DEM to determine the colour of each pixel
 
@@ -209,4 +211,25 @@ Play around with the colours and their positions on the ramp to make change the 
 ## Step 6.5: (Optional) Differentiate AOI from non-AOI Areas
 * Use the previously created mask in 2.5 to selectively colour areas
 * Use the previously created mask in 2.5 to enhance certain area's elevation
-* [Link](./optional_extras.md#Step-2.5-Enhanced-Masking-for-AOI)
+* [Link](./optional_extras.md#Step-6.5-Differentiate-AOI-from-non-AOI-Areas)
+
+## Step 7: Export Render to png file <a name="7"></a>
+* Once you are happy with your settings you can increase 'Dimensions' % in 'Output Properties' to as large as your computer allows. Hit F12 and let the image render
+	* Trial and error is the best way to find this
+	* On a GPU with 8GB of memory and using Blender Cycles with Optix the limit is around 6000 x 4500 images though this will vary depending on the complexity of the DEM
+
+<br>
+
+* Once complete select Image > Save As
+	* For highest quality change the 'Color Depth' to 16 and the 'Compression' to 0%
+<img src="./tutorial/screenshots/export.png">
+
+## Step 7.5: Upscale the Render
+* Take the output png and upscale it for higher resolutions for larger format printing
+* [Free online upscalers](https://waifu2x.pro/) or other software (Photoshop, Gigapixel AI) are able to do this. Especially useful if your hardware does not allow for high resolution renders
+
+## Step 8: Add Text and Borders <a name="8"></a>
+
+* Bring the newly exported image into Photoshop/Photopea/Other image editor and add text/borders to suit
+
+<img src="./tutorial/screenshots/composite.png">
